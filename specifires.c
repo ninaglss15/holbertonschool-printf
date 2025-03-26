@@ -53,44 +53,44 @@ int print_percent(va_list args)
 
 int print_int(va_list args)
 {
-    int num = va_arg(args, int);
-    unsigned int abs_num;
-    int len = 0;
-    unsigned int divisor;
-    char digit;
+	int num = va_arg(args, int);
+	unsigned int abs_num;
+	int len = 0;
+	unsigned int divisor;
+	char digit;
 
-    if (num < 0)
-    {
-        write(1, "-", 1);
-        len++;
-        abs_num = (unsigned int)(-num);
-    }
-    else
-    {
-        abs_num = (unsigned int)num;
-    }
+	if (num < 0)
+	{
+		write(1, "-", 1);
+		len++;
+		abs_num = (unsigned int)(-num);
+	}
+	else
+	{
+		abs_num = (unsigned int)num;
+	}
 
-    if (abs_num == 0)
-    {
-        write(1, "0", 1);
-        return (len + 1);
-    }
+	if (abs_num == 0)
+	{
+		write(1, "0", 1);
+		return (len + 1);
+	}
 
-    divisor = 1;
+	divisor = 1;
 
-    /* Calculer le diviseur correspondant au premier chiffre */
-    for (; abs_num / divisor > 9; divisor *= 10)
-        ;
+	/* Calculer le diviseur correspondant au premier chiffre */
+	for (; abs_num / divisor > 9; divisor *= 10)
+	;
 
-    /* Affichage des chiffres avec une boucle for */
-    for (; divisor > 0; divisor /= 10)
-    {
-        digit = (char)((abs_num / divisor) + '0');
-        write(1, &digit, 1);
-        abs_num %= divisor;
-        len++;
-    }
+	/* Affichage des chiffres avec une boucle for */
+	for (; divisor > 0; divisor /= 10)
+	{
+		digit = (char)((abs_num / divisor) + '0');
+		write(1, &digit, 1);
+		abs_num %= divisor;
+		len++;
+	}
 
-    return len;
+	return len;
 }
 
