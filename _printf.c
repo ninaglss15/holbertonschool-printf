@@ -20,8 +20,6 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '%')
-			write(1, "%", 1);
 			if (format[i] == 'c')
 				count += print_char(args);
 			else if (format[i] == 's')
@@ -30,13 +28,7 @@ int _printf(const char *format, ...)
 				count += print_percent(args);
 			else if (format[i] == 'd' || format[i] == 'i')
 				count += print_integer(args);
-			 else  /* For unknown characters after '%' */
-            		{
-                	write(1, "%", 1);  /* Print '%' */
-                	write(1, &format[i], 1);  /* Print the unknown character */
-                	count += 2;  /* Count both the '%' and the unknown character */
             		}
-		}
 		else
 		{
 			write(1, &format[i], 1);
