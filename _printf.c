@@ -28,7 +28,13 @@ int _printf(const char *format, ...)
 				count += print_percent(args);
 			else if (format[i] == 'd' || format[i] == 'i')
 				count += print_int(args);
-            		}
+			else
+        		{
+            			write(1, "%", 1);
+            			write(1, &format[i], 1);
+            			count += 2;
+        		}
+      		}
 		else
 		{
 			write(1, &format[i], 1);
