@@ -10,7 +10,9 @@ typedef struct print_func
 } print_func_t;
 
 int int_to_string(int num, char *buffer);
+
 int my_strlen(const char *str);
+
 int _printf(const char *format, ...);
 int spec_func(char format, va_list args);
 int print_char(va_list args);
