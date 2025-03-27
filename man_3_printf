@@ -34,13 +34,17 @@ EXAMPLES
     Displaying a string:
 
         _printf("Message: %s\n", "Hello!");  
+
     Displaying a number:
 
         _printf("Number: %d\n", 42);  
+
     Displaying a percent sign:
 
         _printf("Progress: %%\n");  
 
 
 AUTHORS
-    Written by Galasso Nina and Rouigui Omar.
+
+   Written by [Nina Galasso](https://github.com/ninaglass15) and [Omar Rouigui](https://github.com/omarrui).
+

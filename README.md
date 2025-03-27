@@ -57,8 +57,8 @@ Below is a flowchart that outlines how `_printf` processes format specifiers:
 
 ## Man Page
 
-![Man Page Placeholder](man-page.png)
-
+![Man Page Placeholder](man1.png)
+![Man Page Placeholder](man2.png)
 
 ## Explanation of Other Files
 
