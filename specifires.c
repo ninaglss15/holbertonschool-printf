@@ -2,6 +2,13 @@
 #include <unistd.h>
 #include <limits.h>
 #include "main.h"
+/**
+ * spec_func - Selects the appropriate function based on format specifier
+ * @format: Character indicating the type of format
+ * @args: List of variadic arguments
+ *
+ * Return: Number of characters printed
+ */
 int spec_func(char format, va_list args)
 {
 	int j = 0;
@@ -22,18 +29,28 @@ int spec_func(char format, va_list args)
 	j++;
 	}
 
-	/* Si le format n'existe pas, affiche simplement "%" suivi du caractère inconnu */
 	write(1, "%", 1);
 	write(1, &format, 1);
 	return (2);
 }
-
+/**
+ * print_char - Prints a single character
+ * @args: List of variadic arguments (expects an int but cast to char)
+ *
+ * Return: Number of characters printed (always 1)
+ */
 int print_char(va_list args)
 {
 	char res = va_arg(args, int);
-	return(write(1, &res, 1));
-}
 
+	return (write(1, &res, 1));
+}
+/**
+ * print_string - Prints a string
+ * @args: List of variadic arguments
+ *
+ * Return: Number of characters printed
+ */
 int print_string(va_list args)
 {
 	char *ptr = va_arg(args, char *);
@@ -43,14 +60,24 @@ int print_string(va_list args)
 
 	return (write(1, ptr, my_strlen(ptr)));
 }
-
+/**
+ * print_percent - Prints a percent symbol "%"
+ * @args: List of variadic arguments (not used here)
+ *
+ * Return: Number of characters printed (always 1)
+ */
 int print_percent(va_list args)
 {
 	(void)args;
 	write(1, "%", 1);
 	return (1);
 }
-
+/**
+ * print_int - Prints a signed integer
+ * @args: List of variadic arguments (expects an int)
+ *
+ * Return: Number of characters printed
+ */
 int print_int(va_list args)
 {
 	int num = va_arg(args, int);
@@ -91,6 +118,6 @@ int print_int(va_list args)
 		len++;
 	}
 
-	return len;
+	return (len);
 }
 
