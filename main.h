@@ -7,7 +7,7 @@
  * @type: The format specifier (e.g., 'c', 's', '%', 'd', etc.)
  * @print_func: Pointer to the corresponding function that handles printing
  */
-typedef struct(print_func);
+typedef struct print_func
 {
 	char type;
 	int (*print_func)(va_list);
