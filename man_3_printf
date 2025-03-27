@@ -26,7 +26,7 @@ RETURN VALUE
     Returns the number of characters printed (excluding the null terminator '\0').
     Returns -1 if format is NULL.
 
-EXAMPLES:
+EXAMPLES
     Displaying a character:
 
         _printf("Character: %c\n", 'A');  
@@ -42,6 +42,6 @@ EXAMPLES:
         _printf("Progress: %%\n");  
 
 
-AUTHORS:
+AUTHORS
     Written by nina and omar.
 
