@@ -41,11 +41,9 @@ EXAMPLES
 
     Displaying a percent sign:
 
-        _printf("Progress: %%\n");  
+        _printf("Progress: %%\n");
 
 
 AUTHORS
 
       Written by Nina Galasso and Omar Rouigui.
-
-
