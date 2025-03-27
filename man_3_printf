@@ -1,58 +1,47 @@
-_printf(3) – Custom Output Formatting Function
+_printf(3)      – Custom Output Formatting Function
+
+
 NAME
-_printf – Displays formatted text based on specifiers
+    _printf – Displays formatted text based on specifiers
 
 SYNOPSIS
-c
-Copier
-Modifier
-#include "main.h"  
+    #include "main.h"  
 
-int _printf(const char *format, ...);  
+    int _printf(const char *format, ...);  
+
 DESCRIPTION
-_printf is a function that prints a formatted string, similar to the printf function in C. It supports several format specifiers to display different types of data.
+    _printf is a function that prints a formatted string, similar to the printf function in C. 
+    It supports several format specifiers to display different types of data.
 
-Supported Format Specifiers
-%c : Displays a character
+    Supported Format Specifiers:
 
-%s : Displays a string
-
-%d : Displays a decimal number
-
-%i : Same as %d
-
-%% : Displays a literal %
+    %c : Displays a character
+    %s : Displays a string
+    %d : Displays a decimal number
+    %i : Same as %d
+    %% : Displays a literal %
 
 RETURN VALUE
-Returns the number of characters printed (excluding the \0 terminator).
 
-Returns -1 if format is NULL.
+    Returns the number of characters printed (excluding the null terminator '\0').
+    Returns -1 if format is NULL.
 
-EXAMPLES
-Displaying a character:
+EXAMPLES:
+    Displaying a character:
 
-c
-Copier
-Modifier
-_printf("Character: %c\n", 'A');  
-Displaying a string:
+        _printf("Character: %c\n", 'A');  
 
-c
-Copier
-Modifier
-_printf("Message: %s\n", "Hello!");  
-Displaying a number:
+    Displaying a string:
 
-c
-Copier
-Modifier
-_printf("Number: %d\n", 42);  
-Displaying a percent sign:
+        _printf("Message: %s\n", "Hello!");  
+    Displaying a number:
 
-c
-Copier
-Modifier
-_printf("Progress: %%\n");  
-AUTHORS
-Written by nina and omar.
+        _printf("Number: %d\n", 42);  
+    Displaying a percent sign:
+
+        _printf("Progress: %%\n");  
+
+
+AUTHORS:
+    Written by nina and omar.
 
