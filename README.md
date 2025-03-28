@@ -27,11 +27,11 @@ int main(void)
 ## Steps Taken in the Implementation
 
 1. **Define the Function Signature:** We created the `_printf` function with the standard signature:
-   
+
    ```c
    int _printf(const char *format, ...);
    ```
-   
+
 2. **Setting Up Variadic Functions:** To handle an arbitrary number of arguments, we used `va_list`, `va_start`, `va_arg`, and `va_end` macros. These allowed us to loop through the arguments passed after the format string.
 
 3. **Handling Each Format Specifier:** For each format specifier, we wrote separate helper functions:
@@ -39,7 +39,7 @@ int main(void)
    - `print_string` for `%s`
    - `print_int` for `%d` and `%i`
    - `print_percent` for `%%`
-   
+
 4. **Formatting and Output:** For integer types, we used functions like `itoa` (integer-to-string conversion).
 
 5. **Handling Edge Cases and Errors:**
@@ -105,6 +105,6 @@ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c -o printf
 
 ## Authors
 
+
 - **Omar Rouigui**
 - **Nina Galasso** 
-
