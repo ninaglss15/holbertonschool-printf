@@ -56,7 +56,10 @@ Below is a flowchart that outlines how `_printf` processes format specifiers:
 
 
 ## Man Page
-
+This command enables us to call the man:
+'
+man ./man_3_printf
+'
 ![Man Page Placeholder](man1.jpg)
 ![Man Page Placeholder](man2.jpg)
 
@@ -102,5 +105,6 @@ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c -o printf
 
 ## Authors
 
-- **Omar  Rouigui**
-- **Nina  Galasso**
+
+- **Omar Rouigui**
+- **Nina Galasso** 
