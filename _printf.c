@@ -9,11 +9,11 @@
 */
 int _printf(const char *format, ...)
 {
-	int count = 0;/*Counter for number of characters displayed.*/
-	unsigned int i;/*Scrolls the format string*/
+	int count = 0;
+	unsigned int i;
 	va_list args;
 
-	va_start(args, format);/*Initialize args to access arguments*/
+	va_start(args, format);
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
