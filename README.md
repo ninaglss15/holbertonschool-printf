@@ -52,7 +52,7 @@ int main(void)
 
 Below is a flowchart that outlines how `_printf` processes format specifiers:
 
-![Flowchart](flowchaart.jpg)
+<img src="jpg/flowchaart.jpg"/>
 
 
 ## Man Page
@@ -60,30 +60,30 @@ This command enables us to call the man:
 '
 man ./man_3_printf
 '
-![Man Page Placeholder](man1.jpg)
-![Man Page Placeholder](man2.jpg)
+<img src="jpg/man1.jpg"/>
+<img src="jpg/man2.jpg"/>
 
 ## Explanation of files
 
-## README.md: 
+### README.md: 
 Project description.
 
-## _printf.c: 
+### _printf.c: 
 Contains the main _printf code, which displays text based on given formats.
 
-## func.c: 
+### func.c: 
 Contains useful functions, such as number conversion and string handling.
 
-## main.c: 
+### main.c: 
 File with tests to check that _printf works correctly.
 
-## main.h: 
+### main.h: 
 Header file that includes function declarations and required libraries.
 
-## specifires.c: 
+### specifires.c: 
 Manages different formats (%d, %s, etc.).
 
-## man_3_printf: 
+### man_3_printf: 
 Provides explanations on how to use _printf.
 
 ## Example of `_printf` in Action
