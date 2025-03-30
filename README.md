@@ -63,13 +63,28 @@ man ./man_3_printf
 ![Man Page Placeholder](man1.jpg)
 ![Man Page Placeholder](man2.jpg)
 
-## Explanation of Other Files
+## Explanation of files
 
-### main.h
-This header file contains function prototypes and necessary library inclusions required for `_printf` to function.
+## README.md: 
+Project description.
 
-### Integer to String Conversion (itoa)
-We implemented a helper function to convert integers to strings for proper formatting in `_printf`.
+## _printf.c: 
+Contains the main _printf code, which displays text based on given formats.
+
+## func.c: 
+Contains useful functions, such as number conversion and string handling.
+
+## main.c: 
+File with tests to check that _printf works correctly.
+
+## main.h: 
+Header file that includes function declarations and required libraries.
+
+## specifires.c: 
+Manages different formats (%d, %s, etc.).
+
+## man_3_printf: 
+Provides explanations on how to use _printf.
 
 ## Example of `_printf` in Action
 
