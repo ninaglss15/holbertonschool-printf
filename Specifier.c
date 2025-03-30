@@ -105,11 +105,9 @@ int print_int(va_list args)
 
 	divisor = 1;
 
-	/* Calculer le diviseur correspondant au premier chiffre */
 	for (; abs_num / divisor > 9; divisor *= 10)
 	;
 
-	/* Affichage des chiffres avec une boucle for */
 	for (; divisor > 0; divisor /= 10)
 	{
 		digit = (char)((abs_num / divisor) + '0');
