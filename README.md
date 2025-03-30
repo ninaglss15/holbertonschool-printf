@@ -80,7 +80,7 @@ File with tests to check that _printf works correctly.
 ### main.h: 
 Header file that includes function declarations and required libraries.
 
-### specifires.c: 
+### Specifier.c: 
 Manages different formats (%d, %s, etc.).
 
 ### man_3_printf: 
