@@ -23,7 +23,7 @@ int main(void)
   - `%s` : Prints a string
   - `%d` / `%i` : Prints integers
   - `%%` : Prints a percent symbol
->≥
+
 ## Steps Taken in the Implementation
 
 1. **Define the Function Signature:** We created the `_printf` function with the standard signature:
