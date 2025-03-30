@@ -46,7 +46,7 @@ int main(void)
    - Printing `NULL` for strings.
    - Handling negative numbers.
    - Printing pointer addresses correctly in hexadecimal format.
-   - If `_printf` encounters an unsupported specifier, it returns an error message.
+   - If `_printf` encounters an unsupported specifier, it print as it is .
 
 ## Flowchart
 
