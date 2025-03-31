@@ -1,49 +1,58 @@
-_printf(3)      – Custom Output Formatting Function
+.TH _PRINTF 3 "31 mars 2025" "Version 1.0" "Pages de manuel personnalisées"
+.SH NOM
+_printf \- Affiche du texte formaté basé sur des spécificateurs
+.SH SYNOPSIS
+.nf
+#include "main.h"
 
+int _printf(const char *format, ...);
+.fi
+.SH DESCRIPTION
+_printf est une fonction qui imprime une chaîne formatée, similaire à la fonction printf en C. Elle prend en charge plusieurs spécificateurs de format pour afficher différents types de données.
 
-NAME
-    _printf – Displays formatted text based on specifiers
+Spécificateurs de format pris en charge :
 
-SYNOPSIS
-    #include "main.h"  
+.TP
+.B %c
+Affiche un caractère
+.TP
+.B %s
+Affiche une chaîne de caractères
+.TP
+.B %d
+Affiche un nombre décimal
+.TP
+.B %i
+Identique à %d
+.TP
+.B %%
+Affiche un pourcentage littéral
+.SH VALEUR DE RETOUR
+Renvoie le nombre de caractères imprimés (hors le terminateur nul '\0').
+Renvoie -1 si le format est NULL.
+.SH EXEMPLES
+Affichage d'un caractère :
 
-    int _printf(const char *format, ...);  
+.nf
+_printf("Caractère : %c\n", 'A');
+.fi
 
-DESCRIPTION
-    _printf is a function that prints a formatted string, similar to the printf function in C. 
-    It supports several format specifiers to display different types of data.
+Affichage d'une chaîne de caractères :
 
-    Supported Format Specifiers:
+.nf
+_printf("Message : %s\n", "Bonjour !");
+.fi
 
-    %c : Displays a character
-    %s : Displays a string
-    %d : Displays a decimal number
-    %i : Same as %d
-    %% : Displays a literal %
+Affichage d'un nombre :
 
-RETURN VALUE
+.nf
+_printf("Nombre : %d\n", 42);
+.fi
 
-    Returns the number of characters printed (excluding the null terminator '\0').
-    Returns -1 if format is NULL.
+Affichage d'un signe pourcentage :
 
-EXAMPLES
-    Displaying a character:
-
-        _printf("Character: %c\n", 'A');  
-
-    Displaying a string:
-
-        _printf("Message: %s\n", "Hello!");  
-
-    Displaying a number:
-
-        _printf("Number: %d\n", 42);  
-
-    Displaying a percent sign:
-
-        _printf("Progress: %%\n");
-
-
-AUTHORS
-
-      Written by Nina Galasso and Omar Rouigui.
+.nf
+_printf("Progression : %%\n");
+.fi
+.SH AUTEURS
+Écrit par Nina Galasso et Omar Rouigui.
